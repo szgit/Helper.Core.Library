@@ -1,0 +1,31 @@
+F:\MyProject\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+F:\MyProject\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+F:\MyProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+F:\MyProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+D:\下载\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+D:\下载\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+D:\下载\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+D:\下载\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+D:\下载\Helper.Core.Library\obj\Debug\Helper.Core.Library.csprojResolveAssemblyReference.cache
+F:\Mobo-Library\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+F:\Mobo-Library\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+F:\Mobo-Library\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+F:\Mobo-Library\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.2\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.2\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.2\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.2\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library\obj\Debug\Interop.MSScriptControl.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library\obj\Debug\Helper.Core.Library.csproj.ResolveComReference.cache
+E:\程序开发\C# 帮助类库\Helper.Core.Library\bin\Debug\Interop.MSScriptControl.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\bin\Debug\Interop.MSScriptControl.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Interop.MSScriptControl.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.csproj.ResolveComReference.cache
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb

@@ -1,0 +1,9 @@
+﻿例一：
+
+string formula = "a + b * c";
+int result = CalcHelper.Calc<int>(formula, new { a = 10, b = 20, c = 5 });
+
+例二：
+
+string formula = "function Add(x, y){ return x + y; } Add(a, b);";
+int result = CalcHelper.Calc<int>(formula, new { a = 10, b = 30 });

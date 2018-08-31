@@ -11,12 +11,13 @@ namespace Helper.Core.Library
 {
     public class ReflectionGenericHelper
     {
+        #region 私有属性常量
         public static readonly ReflectionGenericHelper Instance = new ReflectionGenericHelper();
+        #endregion
 
         #region 对外公开方法
 
         #region 创建/属性检测
-
         /// <summary>
         /// 创建一个 T 对象
         /// </summary>
@@ -26,7 +27,6 @@ namespace Helper.Core.Library
         {
             return new T();
         }
-
         /// <summary>
         /// 创建一个 List&lt;T&gt; 对象
         /// </summary>
@@ -38,7 +38,6 @@ namespace Helper.Core.Library
             newListType = newListType.MakeGenericType(new Type[] { typeof(T) });
             return Activator.CreateInstance(newListType) as IList<T>;
         }
-
         /// <summary>
         /// 判断 T 类型是否是自定义类型
         /// </summary>
@@ -49,7 +48,6 @@ namespace Helper.Core.Library
             Type type = typeof(T);
             return (type != typeof(object) && Type.GetTypeCode(type) == TypeCode.Object);
         }
-
         /// <summary>
         /// 判断 T 类型是否包含属性
         /// </summary>
@@ -63,7 +61,6 @@ namespace Helper.Core.Library
         #endregion
 
         #region 属性列表获取/遍历
-
         /// <summary>
         /// 属性列表遍历
         /// </summary>
@@ -77,7 +74,6 @@ namespace Helper.Core.Library
                 callback(propertyInfo);
             }
         }
-
         /// <summary>
         /// 获取 T 属性名和属性值
         /// </summary>
@@ -91,13 +87,11 @@ namespace Helper.Core.Library
             {
                 resultDict.Add(propertyInfo.Name, propertyInfo.GetValue(t));
             });
-
             return resultDict;
         }
         #endregion
 
         #region 表达式或 Emit 反射获取设置属性值（泛型）
-
         /// <summary>
         /// T 类型索引器获取值委托
         /// </summary>
@@ -114,7 +108,6 @@ namespace Helper.Core.Library
             }
             return EmitPropertyIndexGetCall<T, K, P>();
         }
-
         /// <summary>
         /// T 类型属性获取值委托列表
         /// </summary>
@@ -129,7 +122,6 @@ namespace Helper.Core.Library
             }
             return EmitPropertyGetCallDict<T>();
         }
-
         /// <summary>
         /// T 类型属性获取值委托
         /// </summary>
@@ -141,7 +133,6 @@ namespace Helper.Core.Library
         {
             return PropertyGetCall<T>(typeof(T).GetProperty(propertyName), reflectionType);
         }
-
         /// <summary>
         /// T 类型属性获取值委托
         /// </summary>
@@ -157,7 +148,6 @@ namespace Helper.Core.Library
             }
             return EmitPropertyGetCall<T>(propertyInfo);
         }
-
         /// <summary>
         /// T 类型属性设置值委托列表
         /// </summary>
@@ -172,7 +162,6 @@ namespace Helper.Core.Library
             }
             return EmitPropertySetCallDict<T>();
         }
-
         /// <summary>
         /// T 类型属性设置值委托
         /// </summary>
@@ -184,7 +173,6 @@ namespace Helper.Core.Library
         {
             return PropertySetCall<T>(typeof(T).GetProperty(propertyName), reflectionType);
         }
-
         /// <summary>
         /// T 类型属性设置值委托
         /// </summary>
@@ -200,7 +188,6 @@ namespace Helper.Core.Library
             }
             return EmitPropertySetCall<T>(propertyInfo);
         }
-
         /// <summary>
         /// 委托设置属性值
         /// </summary>
@@ -216,7 +203,6 @@ namespace Helper.Core.Library
         #endregion
 
         #region 表达式或 Emit 反射获取设置属性值（Type）
-
         /// <summary>
         /// 属性获取值委托列表
         /// </summary>
@@ -229,7 +215,6 @@ namespace Helper.Core.Library
             MethodInfo generic = method.MakeGenericMethod(type);
             return generic.Invoke(ReflectionGenericHelper.Instance, new object[] { reflectionType });
         }
-
         /// <summary>
         /// 属性获取值委托
         /// </summary>
@@ -241,7 +226,6 @@ namespace Helper.Core.Library
         {
             return PropertyGetCall(type, type.GetProperty(propertyName), reflectionType);
         }
-
         /// <summary>
         /// 属性获取值委托
         /// </summary>
@@ -255,7 +239,6 @@ namespace Helper.Core.Library
             MethodInfo generic = method.MakeGenericMethod(type);
             return generic.Invoke(ReflectionGenericHelper.Instance, new object[] { propertyInfo, reflectionType });
         }
-
         /// <summary>
         /// 属性设置值委托列表
         /// </summary>
@@ -268,7 +251,6 @@ namespace Helper.Core.Library
             MethodInfo generic = method.MakeGenericMethod(type);
             return generic.Invoke(ReflectionGenericHelper.Instance, new object[] { reflectionType });
         }
-
         /// <summary>
         /// 属性设置值委托
         /// </summary>
@@ -280,7 +262,6 @@ namespace Helper.Core.Library
         {
             return PropertySetCall(type, type.GetProperty(propertyName), reflectionType);
         }
-
         /// <summary>
         /// 属性设置值委托
         /// </summary>
@@ -294,7 +275,6 @@ namespace Helper.Core.Library
             MethodInfo generic = method.MakeGenericMethod(type);
             return generic.Invoke(ReflectionGenericHelper.Instance, new object[] { propertyInfo, reflectionType });
         }
-
         /// <summary>
         /// 委托设置属性值
         /// </summary>

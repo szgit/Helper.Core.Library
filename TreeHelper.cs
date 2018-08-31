@@ -1,7 +1,7 @@
-﻿using System;
-/*
+﻿/*
  * 树形数据生成。
  * */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;

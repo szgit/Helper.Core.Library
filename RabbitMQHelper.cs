@@ -60,10 +60,10 @@ namespace Helper.Core.Library
         /// <typeparam name="T">实体类型</typeparam>
         /// <param name="exchange">交换机名</param>
         /// <param name="queue">队列名</param>
-        /// <param name="t">实体类型数据</param>
+        /// <param name="data">实体类型数据</param>
         /// <param name="type">交换机类型</param>
         /// <param name="deliveryMode">传递模式</param>
-        public void Send<T>(string exchange, string queue, T t, string type = RabbitMQExchangeTypeEnum.Direct, int deliveryMode = PERSISTENT) where T : class
+        public void Send<T>(string exchange, string queue, T data, string type = RabbitMQExchangeTypeEnum.Direct, int deliveryMode = PERSISTENT) where T : class
         {
             IConnection connection = null;
             IModel channel = null;
@@ -80,7 +80,7 @@ namespace Helper.Core.Library
                 properties.DeliveryMode = (byte)deliveryMode; //表示持久化消息
 
                 //推送消息
-                channel.BasicPublish(exchange, queue, properties, XmlSerializerHelper.Serialize<T>(t));
+                channel.BasicPublish(exchange, queue, properties, XmlSerializerHelper.Serialize<T>(data));
             }
             catch
             {

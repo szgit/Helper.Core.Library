@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：利用 NPOI 读取/写入 Excel 文档。
+ * 作用：利用 NPOI 读取/写入 Excel 文档，是对 ExcelHelper 的扩展，参数使用表达式，目的是减少属性名的拼写错误。
  * */
 using NPOI.SS.UserModel;
 using System;

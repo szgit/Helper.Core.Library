@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace Helper.Core.Library
 {
+    #region 逻辑处理辅助枚举
     public class MimeTypeEnum
     {
         public const string ALL = "*";
@@ -27,6 +28,7 @@ namespace Helper.Core.Library
         public const string HTML = "html";
         public const string TXT = "txt";
     }
+    #endregion
 
     public class MimeHelper
     {

@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：批次数据多线程处理。
+ * 作用：多线程处理，在线程中可以实现同步/异步操作。
  * */
 using System;
 using System.Collections.Generic;

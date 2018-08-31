@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：日期操作。
+ * 作用：日期操作，对 TimeSpan 进行格式化输出。
  * */
 using System;
 
@@ -18,7 +18,6 @@ namespace Helper.Core.Library
         {
             return Subtract(dateTime, DateTime.Now, dateFormat);
         }
-
         /// <summary>
         /// 返回两个时间差值
         /// </summary>

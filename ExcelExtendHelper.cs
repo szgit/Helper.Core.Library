@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：利用 NPOI 读取/写入 Excel 文档。
+ * 作用：利用 NPOI 读取/写入 Excel 文档，支持多表单文档的读取/写入。
  * */
 using NPOI.SS.UserModel;
 using System;

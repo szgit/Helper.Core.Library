@@ -51,6 +51,15 @@ namespace Helper.Core.Library
         #endregion
 
         #region 对外公开方法
+        /// <summary>
+        /// 获取随机字符串
+        /// </summary>
+        /// <param name="length">长度</param>
+        /// <param name="prefix">前缀</param>
+        /// <param name="suffix">后缀</param>
+        /// <param name="seedType">StringSeedTypeEnum</param>
+        /// <param name="caseType">StringCaseTypeEnum</param>
+        /// <returns></returns>
         public static string GetRandomCode(int length, string prefix = "", string suffix = "", StringSeedTypeEnum seedType = StringSeedTypeEnum.Number, StringCaseTypeEnum caseType = StringCaseTypeEnum.Normal)
         {
             char[] seedList = null;

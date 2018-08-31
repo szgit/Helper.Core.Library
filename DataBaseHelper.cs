@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：数据库增/删/改/查操作。
+ * 作用：数据库增/删/改/查操作，SqlServer 支持批量导入以及分页查询。
  * */
 using System;
 using System.Collections.Generic;

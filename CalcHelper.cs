@@ -12,6 +12,10 @@ namespace Helper.Core.Library
 {
     public class CalcHelper
     {
+        #region 私有属性常量
+        private const string FormulaNullException = "formula 数据为空！";
+        #endregion
+
         #region 对外公开方法
         /// <summary>
         /// 公式计算
@@ -22,7 +26,7 @@ namespace Helper.Core.Library
         /// <returns></returns>
         public static T Calc<T>(string formula, object parameterList = null)
         {
-            if (string.IsNullOrWhiteSpace(formula)) throw new Exception("formula 数据为空。");
+            if (string.IsNullOrWhiteSpace(formula)) throw new Exception(FormulaNullException);
 
             #region 参数数据映射
             Dictionary<string, object> paramDict = CommonHelper.GetParameterDict(parameterList);

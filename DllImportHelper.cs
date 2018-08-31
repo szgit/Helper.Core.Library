@@ -1,9 +1,11 @@
 ﻿/*
- * 作用：调用外部/系统 DLL。
+ * 作用：调用外部/系统 DLL，判断文档是否处于打开状态，读取/写入 Ini 数据。
  * */
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Helper.Core.Library
 {
@@ -82,6 +84,28 @@ namespace Helper.Core.Library
             return false;
         }
         /// <summary>
+        /// 设置 INI 数据
+        /// </summary>
+        /// <param name="iniPath">ini 文件路径</param>
+        /// <param name="section">节点名，[] 符号内表示节点</param>
+        /// <param name="keyValueDict">键值数据</param>
+        /// <returns></returns>
+        public static bool SetIniDataDict(string iniPath, string section, Dictionary<string, string> keyValueDict)
+        {
+            if (!System.IO.File.Exists(iniPath)) System.IO.File.Create(iniPath).Close();
+            if (keyValueDict != null && keyValueDict.Count > 0)
+            {
+                bool status = false;
+                foreach(KeyValuePair<string, string> keyValueItem in keyValueDict)
+                {
+                    status = SetIniData(iniPath, section, keyValueItem.Key, keyValueItem.Value);
+                    if (!status) return false;
+                }
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
         /// 获取 INI 数据
         /// </summary>
         /// <param name="iniPath">ini 文件路径</param>
@@ -97,6 +121,25 @@ namespace Helper.Core.Library
             GetPrivateProfileString(section, key, "", stringBuilder, size, iniPath);
 
             return stringBuilder.ToString();
+        }
+        /// <summary>
+        /// 获取 INI 数据
+        /// </summary>
+        /// <param name="iniPath">ini 文件路径</param>
+        /// <param name="section">节点名，[] 符号内表示节点</param>
+        /// <param name="keyList">节点键列表</param>
+        /// <param name="size">读取字节长度</param>
+        /// <returns></returns>
+        public static Dictionary<string, string> GetIniDataDict(string iniPath, string section, string[] keyList, int size = 1024)
+        {
+            if (keyList == null && keyList.Length == 0) return null;
+
+            Dictionary<string, string> resultDict = new Dictionary<string, string>();
+            foreach(string key in keyList)
+            {
+                resultDict.Add(key, GetIniData(iniPath, section, key, size));
+            }
+            return resultDict;
         }
 
         #endregion

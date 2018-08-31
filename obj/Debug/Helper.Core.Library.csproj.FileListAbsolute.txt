@@ -29,3 +29,11 @@ E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\
 E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.csproj.ResolveComReference.cache
 E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
 E:\程序开发\C# 帮助类库\Helper.Core.Library 1.0.0.5\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+E:\GitProject\Helper.Core.Library\bin\Debug\Helper.Core.Library.dll
+E:\GitProject\Helper.Core.Library\bin\Debug\Helper.Core.Library.pdb
+E:\GitProject\Helper.Core.Library\bin\Debug\Interop.MSScriptControl.dll
+E:\GitProject\Helper.Core.Library\obj\Debug\Interop.MSScriptControl.dll
+E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.csproj.ResolveComReference.cache
+E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
+E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
+E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.csprojResolveAssemblyReference.cache

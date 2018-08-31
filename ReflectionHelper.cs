@@ -15,12 +15,10 @@ namespace Helper.Core.Library
         /// 原始反射
         /// </summary>
         Original = 1,
-
         /// <summary>
         /// 表达式反射
         /// </summary>
         Expression = 2,
-
         /// <summary>
         /// Emit 反射
         /// </summary>
@@ -33,7 +31,6 @@ namespace Helper.Core.Library
         #region 对外公开方法
 
         #region 创建/属性检测
-
         /// <summary>
         /// 根据 Type 创建实例
         /// </summary>
@@ -43,7 +40,6 @@ namespace Helper.Core.Library
         {
             return Activator.CreateInstance(type, true);
         }
-
         /// <summary>
         /// 根据 Type 创建 IList 实例
         /// </summary>
@@ -55,7 +51,6 @@ namespace Helper.Core.Library
             newListType = newListType.MakeGenericType(new Type[] { itemType });
             return Activator.CreateInstance(newListType) as IList;
         }
-
         /// <summary>
         /// 判断 Type 是否是自定义类型
         /// </summary>
@@ -65,7 +60,6 @@ namespace Helper.Core.Library
         {
             return (type != typeof(object) && Type.GetTypeCode(type) == TypeCode.Object);
         }
-
         /// <summary>
         /// 判断 Type 是否 IList 类型
         /// </summary>
@@ -75,7 +69,6 @@ namespace Helper.Core.Library
         {
             return (type.GetInterface("IList") != null);
         }
-
         /// <summary>
         /// 判断 Type 是否包含属性
         /// </summary>
@@ -86,7 +79,6 @@ namespace Helper.Core.Library
         {
             return type.GetProperty(propertyName) != null;
         }
-
         /// <summary>
         /// 获得 List&lt;T&gt; 中 T 的类型
         /// </summary>
@@ -101,7 +93,6 @@ namespace Helper.Core.Library
             }
             return null;
         }
-
         /// <summary>
         /// 获取泛型对象的 T 类型
         /// </summary>
@@ -115,7 +106,6 @@ namespace Helper.Core.Library
         #endregion
 
         #region 属性列表获取/遍历
-
         /// <summary>
         /// 属性列表遍历
         /// </summary>
@@ -129,7 +119,6 @@ namespace Helper.Core.Library
                 callback(propertyInfo);
             }
         }
-
         /// <summary>
         /// 获取属性名和属性值
         /// </summary>
@@ -150,7 +139,6 @@ namespace Helper.Core.Library
         #endregion
 
         #region 原始反射获取设置属性值
-
         /// <summary>
         /// 获取索引值
         /// </summary>
@@ -162,7 +150,6 @@ namespace Helper.Core.Library
             var method = data.GetType().GetMethod("get_Item", new Type[] { indexName.GetType() });
             return method.Invoke(data, new object[] { indexName });
         }
-
         /// <summary>
         /// 获取属性值
         /// </summary>
@@ -174,7 +161,6 @@ namespace Helper.Core.Library
             if (propertyInfo == null) return null;
             return propertyInfo.GetValue(data, null);
         }
-
         /// <summary>
         /// 获取属性值
         /// </summary>
@@ -186,7 +172,6 @@ namespace Helper.Core.Library
             if (data == null) return null;
             return GetPropertyValue(data, data.GetType().GetProperty(propertyName));
         }
-
         /// <summary>
         /// 设置属性值
         /// </summary>
@@ -197,7 +182,6 @@ namespace Helper.Core.Library
         {
             SetPropertyValue(data, propertyValue, data.GetType().GetProperty(propertyName));
         }
-
         /// <summary>
         /// 设置属性值
         /// </summary>

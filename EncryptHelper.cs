@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：字符串加密/解密。
+ * 作用：字符串加密/解密，MD5，AES，DES，BASE64。
  * */
 using System;
 using System.IO;

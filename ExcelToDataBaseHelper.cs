@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：利用 NPOI 读取 Excel 数据并导入 SqlServer 数据库。
+ * 作用：利用 NPOI 读取 Excel 文档数据并导入 SqlServer 数据库。
  * */
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,11 @@ namespace Helper.Core.Library
 {
     public class ExcelToDataBaseHelper
     {
+        #region 私有属性常量
+        private const string TextDocumentWriteFailedException = "创建 Text 文档失败！";
+        #endregion
+
+        #region 对外公开方法
         /// <summary>
         /// Excel 数据批量导入 SqlServer
         /// </summary>
@@ -37,7 +42,7 @@ namespace Helper.Core.Library
                 // 生成 Txt 文件
                 bool txtStatus = TxtHelper.ToTxt<T>(txtPath, dataList, ",", System.Text.Encoding.GetEncoding("GBK"), TxtTypeEnum.Normal, txtPropertyMatch);
                 // 如果生成 Txt 失败
-                if (!txtStatus) return false;
+                if (!txtStatus) throw new Exception(TextDocumentWriteFailedException);
                 // Txt 导入数据
                 return BatchImport(tableName, txtPath, 1);
             }
@@ -72,5 +77,6 @@ namespace Helper.Core.Library
                 throw;
             }
         }
+        #endregion
     }
 }

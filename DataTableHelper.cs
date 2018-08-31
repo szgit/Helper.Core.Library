@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：DataTable 与实体列表数据相互转换。
+ * 作用：DataTable 与实体数据列表相互转换。
  * */
 using System;
 using System.Collections.Generic;
@@ -31,7 +31,6 @@ namespace Helper.Core.Library
             Dictionary<string, object> propertyDict = CommonHelper.GetParameterDict(propertyMatchList);
             return ExecuteToDataTable<T>(dataList, propertyDict, propertyNameList, propertyContain, reflectionType);
         }
-        
         /// <summary>
         /// 返回实体类型数据列表
         /// </summary>

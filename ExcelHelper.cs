@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：利用 NPOI 读取/写入 Excel 文档。
+ * 作用：利用 NPOI 读取/写入 Excel 文档，支持读取合并单元格以及带有公式的数据。
  * */
 using System;
 using System.IO;

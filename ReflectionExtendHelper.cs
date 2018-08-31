@@ -9,36 +9,31 @@ namespace Helper.Core.Library
 {
     public class ReflectionExtendHelper
     {
-        #region 常量定义
+        #region 私有属性常量
+
         private const string TYPE_ATTRIBUTE_FORMAT = "{0}_{1}";
         private const string PROPERTY_ATTRIBUTE_FORMAT = "{0}_{1}_{2}";
         private const string GET_TYPE_CALL_FORMAT = "Get_{0}_{1}";
         private const string SET_TYPE_CALL_FORMAT = "Set_{0}_{1}";
         private const string GET_NAME_CALL_FORMAT = "Get_{0}_{1}_{2}";
         private const string SET_NAME_CALL_FORMAT = "Set_{0}_{1}_{2}";
-        #endregion
 
-        #region 私有属性
         /// <summary>
         /// Lock 对象
         /// </summary>
         private static readonly object lockItem = new object();
-
         /// <summary>
         /// Type 特性集合
         /// </summary>
         private static readonly Dictionary<string, dynamic> TypeAttributeDict = new Dictionary<string, dynamic>();
-
         /// <summary>
         /// 属性特性集合
         /// </summary>
         private static readonly Dictionary<string, dynamic> PropertyAttributeDict = new Dictionary<string, dynamic>();
-
         /// <summary>
         /// Type 属性委托集合
         /// </summary>
         private static readonly Dictionary<string, dynamic> PropertyTypeCallDict = new Dictionary<string, dynamic>();
-
         /// <summary>
         /// 属性委托集合
         /// </summary>
@@ -75,7 +70,6 @@ namespace Helper.Core.Library
                 return null;
             }
         }
-
         /// <summary>
         /// 获取类属性的特性数据
         /// </summary>
@@ -88,7 +82,6 @@ namespace Helper.Core.Library
         {
             return GetAttributeValue<T>(type, type.GetProperty(propertyName), lambda);
         }
-        
         /// <summary>
         /// 获取类属性的特性数据
         /// </summary>
@@ -136,7 +129,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCall<T>(type.GetProperty(propertyName), reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的获取值委托
         /// </summary>
@@ -153,7 +145,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCall<T>(propertyInfo, reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的获取值委托
         /// </summary>
@@ -168,7 +159,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCall(type, type.GetProperty(propertyName), reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的获取值委托
         /// </summary>
@@ -183,7 +173,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCall(type, propertyInfo, reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托
         /// </summary>
@@ -200,7 +189,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertySetCall<T>(type.GetProperty(propertyName), reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托
         /// </summary>
@@ -216,7 +204,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertySetCall<T>(propertyInfo, reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托
         /// </summary>
@@ -231,7 +218,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertySetCall(type, type.GetProperty(propertyName), reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托
         /// </summary>
@@ -246,7 +232,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertySetCall(type, propertyInfo, reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的获取值委托列表
         /// </summary>
@@ -262,7 +247,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCallDict<T>(reflectionType);
             }, reflectionType);
         }
-        
         /// <summary>
         /// 获取类属性的获取值委托列表
         /// </summary>
@@ -276,7 +260,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertyGetCallDict(type, reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托列表
         /// </summary>
@@ -292,7 +275,6 @@ namespace Helper.Core.Library
                 return ReflectionGenericHelper.PropertySetCallDict<T>(reflectionType);
             }, reflectionType);
         }
-
         /// <summary>
         /// 获取类属性的设置值委托列表
         /// </summary>

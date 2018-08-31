@@ -1,5 +1,5 @@
 ﻿/*
- * 作用：输出文件流/下载文件。
+ * 作用：输出文件流提供下载/从 URL 下载文件并保存。
  * */
 using System;
 using System.IO;

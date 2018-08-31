@@ -36,4 +36,3 @@ E:\GitProject\Helper.Core.Library\obj\Debug\Interop.MSScriptControl.dll
 E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.csproj.ResolveComReference.cache
 E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.dll
 E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.pdb
-E:\GitProject\Helper.Core.Library\obj\Debug\Helper.Core.Library.csprojResolveAssemblyReference.cache

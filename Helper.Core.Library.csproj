@@ -152,6 +152,7 @@
     <Compile Include="HtmlAnalysisHelper.cs" />
     <Compile Include="HtmlCollectionHelper.cs" />
     <Compile Include="HttpHelper.cs" />
+    <Compile Include="IPHelper.cs" />
     <Compile Include="IQuery\EntityProvider.cs" />
     <Compile Include="IQuery\EntityQueryable.cs" />
     <Compile Include="OCRHelper.cs" />

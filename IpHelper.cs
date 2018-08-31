@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * 作用：获取客户端 IP 地址，以及 IP 与 Long 类型数据相互转换。
+ * */
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;

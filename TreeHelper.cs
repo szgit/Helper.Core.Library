@@ -53,7 +53,7 @@ namespace Helper.Core.Library
         /// <param name="desc">是否倒序</param>
         /// <param name="splitChar">分隔符，例：/</param>
         /// <returns></returns>
-        public static List<T> ToMenu<T>(List<T> dataList, int rootID = 0, int layerIndex = 1, string layerName = "", bool desc = true, string splitChar = "/") where T : ITreeMenu
+        public static List<T> ToMenuList<T>(List<T> dataList, int rootID = 0, int layerIndex = 1, string layerName = "", bool desc = true, string splitChar = "/") where T : ITreeMenu
         {
             List<T> resultList = new List<T>();
 
@@ -82,7 +82,7 @@ namespace Helper.Core.Library
                         trunkItem.LayerName = string.Format("{0}{2}{1}", layerName, trunkItem.TreeName, splitChar);
                     }
                     resultList.Add(trunkItem);
-                    List<T> nodeList = ToMenu<T>(dataList, trunkItem.TreeID, layerIndex + 1, trunkItem.LayerName);
+                    List<T> nodeList = ToMenuList<T>(dataList, trunkItem.TreeID, layerIndex + 1, trunkItem.LayerName);
                     if (nodeList != null && nodeList.Count > 0)
                     {
                         resultList.AddRange(nodeList);

@@ -59,7 +59,7 @@ namespace Helper.Core.Library
         /// <param name="propertyList">属性列表，如果指定，则按指定属性列表设置 Cookie 数据</param>
         /// <param name="propertyContain">是否包含，true 属性包含，flase 属性排除</param>
         /// <param name="reflectionType">反射类型</param>
-        public static void SetCookieT<T>(string cookieName, T data, HttpResponseBase httpResponse, object propertyMatchList = null, string[] propertyList = null, bool propertyContain = true, ReflectionTypeEnum reflectionType = ReflectionTypeEnum.Expression) where T : class
+        public static void SetCookieT<T>(string cookieName, T data, HttpResponseBase httpResponse = null, object propertyMatchList = null, string[] propertyList = null, bool propertyContain = true, ReflectionTypeEnum reflectionType = ReflectionTypeEnum.Expression) where T : class
         {
             SetCookieT<T>(cookieName, data, DateTime.MaxValue, httpResponse, propertyMatchList, propertyList, propertyContain, reflectionType);
         }

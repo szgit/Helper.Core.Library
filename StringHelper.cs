@@ -388,9 +388,11 @@ namespace Helper.Core.Library
         {
             if (string.IsNullOrEmpty(str)) return str;
 
+            str = System.Web.HttpUtility.UrlDecode(str);
+
             List<string> filterList = new List<string>()
             {
-                "*", "'", "<", ">", "=", "select", "delete", "update", "insert"
+                "*", "'", "<", ">", "=", "select", "delete", "update", "insert", "create"
             };
             if (specList != null && specList.Length > 0)
             {

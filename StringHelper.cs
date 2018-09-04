@@ -378,6 +378,31 @@ namespace Helper.Core.Library
 
             return str.Substring(0, endIndex);
         }
+        /// <summary>
+        /// 过滤特殊字符
+        /// </summary>
+        /// <param name="str">字符串</param>
+        /// <param name="specList">特殊字符</param>
+        /// <returns></returns>
+        public static string FilterSpecChar(string str, params string[] specList)
+        {
+            if (string.IsNullOrEmpty(str)) return str;
+
+            List<string> filterList = new List<string>()
+            {
+                "*", "'", "<", ">", "=", "select", "delete", "update", "insert"
+            };
+            if (specList != null && specList.Length > 0)
+            {
+                filterList.AddRange(specList);
+                filterList = filterList.Distinct().ToList();
+            }
+            foreach (string filterData in filterList)
+            {
+                str = str.Replace(filterData, "");
+            }
+            return str;
+        }
         #endregion
 
         #region 逻辑处理私有函数
